@@ -1,10 +1,11 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
-import {IERC20, SafeERC20} from "node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+import {IERC20, SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
 
 
-contract txOlympus {
+contract txOlympus is Ownable {
     using SafeERC20 for IERC20;
 
     uint256 public vandalizeFee;
@@ -36,11 +37,11 @@ contract txOlympus {
         emit TokensClaimed(recipient, amount);
     }
 
-    function _transferFunds(uint256 amount){
+    function _transferFunds(uint256 amount) internal {
         OLYToken.safeTransferFrom(msg.sender, address(this), amount);
     }
 
-    function setOLYToken(IERC20 _OLYToken) external {
+    function setOLYToken(IERC20 _OLYToken) external onlyOwner {
         OLYToken = _OLYToken;
     }
 }
