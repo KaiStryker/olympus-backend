@@ -18,7 +18,9 @@
   "homepage": "https://github.com/KaiStryker/olympus-backend#readme",
   "dependencies": {
     "@openzeppelin/contracts": "^4.7.0",
-    "hardhat": "^2.9.9"
+    "@thirdweb-dev/sdk": "^2.3.24",
+    "hardhat": "^2.9.9",
+    "solc": "^0.8.15"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
