@@ -1,5 +1,5 @@
 const helper = require('./txOlympusHelper');
-const ThirdwebSDK = require("@thirdweb-dev/sdk");
+const { ThirdwebSDK } = require("@thirdweb-dev/sdk");
 const sdk = new ThirdwebSDK("mumbai");
 const OLYtoken = "0xfA157F6608010650fF3B563eaf1F15F8dea726D7"
 const contract = await sdk.getContract(OLYtoken); //address for erc20 tokenizers

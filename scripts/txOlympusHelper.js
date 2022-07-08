@@ -1,4 +1,4 @@
-const ThirdwebSDK = require("@thirdweb-dev/sdk");
+const { ThirdwebSDK } = require("@thirdweb-dev/sdk");
 
 const sdk = new ThirdwebSDK("mumbai");
 const contract = await sdk.getContract("0xBa9e3CCECeB85a1c3e70c66Bd9C4cD822364951E");

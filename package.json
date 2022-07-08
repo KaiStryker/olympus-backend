@@ -21,6 +21,7 @@
     "@openzeppelin/contracts": "^4.7.0",
     "@thirdweb-dev/react": "^2.4.8",
     "@thirdweb-dev/sdk": "^2.3.24",
+    "firebase": "^8.10.1",
     "hardhat": "^2.9.9",
     "solc": "^0.8.15"
   },
