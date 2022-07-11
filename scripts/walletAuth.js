@@ -2,12 +2,12 @@ const { ThirdwebSDK } = require("@thirdweb-dev/sdk");
 
 const sdk = new ThirdwebSDK("mumbai");
 
-const walletAuth = () => {
+const walletAuth = async () => {
   // We specify the domain of the application to authenticate to
   const domain = "thirdweb.com";
 
   // On the client side, we can generate a payload for the connected wallet to login
-  const loginPayload = sdk.auth.login(domain);
+  const loginPayload = await sdk.auth.login(domain);
 
   // Then on the server side, we can securely verify the connected client-side address
   const address = sdk.auth.verify(domain, loginPayload);
@@ -26,4 +26,4 @@ const checkAuth = (domain, token) => {
   return address;
 };
 
-module.exports = { walletAuth, checkAuth}
+module.exports = { walletAuth, checkAuth };
